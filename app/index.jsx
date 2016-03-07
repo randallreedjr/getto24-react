@@ -1,4 +1,5 @@
 var React = require('react')
+var PropTypes = React.PropTypes
 var ReactDOM = require('react-dom')
 
 var Container = React.createClass({
@@ -57,6 +58,9 @@ function Button (props) {
     </div>
   )
 }
+
+Button.propTypes = { color: React.PropTypes.string.isRequired, 
+                     label: React.PropTypes.string.isRequired }
 
 var GetTo24 = React.createClass({
   render: function(){
