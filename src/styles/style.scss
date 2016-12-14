@@ -1,3 +1,6 @@
+$red: #ff6347;
+$green: #12a267;
+
 body {
   min-height: 2000px;
   padding-top: 70px;
@@ -13,28 +16,25 @@ body {
   display: inline;
 }
 
-.red {
-  background: tomato;
-}
-
-.green {
-  background: lightgreen;
-}
-
-.yellow {
-  background: yellow;
-}
-
-.mybutton {
-  border: 1px solid black;
+.button {
   padding: 10px;
   display: inline-block;
-  border-radius: 5px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
-.mybutton a {
-  text-decoration: none;
-  color: black;
+.button-red {
+  background: $red;
+}
+
+.button-green {
+  background: $green;
+}
+
+.button-yellow {
+  background: yellow;
 }
 
 .inputbox {
@@ -63,4 +63,11 @@ body {
   font-style: italic;
   display: inline-block;
   padding-bottom: 20px;
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
 }

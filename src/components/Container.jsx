@@ -12,8 +12,10 @@ export default class Container extends React.Component {
              and division (/), to yield a result of<strong> 24</strong>.
           </p>
           <br />
-          <Button color="green" label="Give me problems" />
-          <Button color="red" label="Show me solutions" />
+          <div className="actions-container">
+            <Button color="green" label="Give me problems" />
+            <Button color="red" label="Show me solutions" />
+          </div>
         </div>
       </div>
     )

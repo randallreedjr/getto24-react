@@ -2,7 +2,7 @@ var React = require('react')
 var ReactDOM = require('react-dom')
 
 // import $ from 'jquery'
-import './styles/style.css'
+import './styles/style.scss'
 
 import App from './components/App.jsx'
 

@@ -3,7 +3,7 @@ import React, { PropType } from 'react'
 export default class Button extends React.Component {
   render() {
     return (
-      <div className={this.props.color + ' mybutton'}>
+      <div className={`button-${this.props.color} button`}>
         <a href="/problem">{this.props.label}</a>
       </div>
     )
