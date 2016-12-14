@@ -1,16 +1,20 @@
-import React, { PropType } from 'react'
+import React, { PropTypes } from 'react'
+import { Link } from 'react-router'
 
 export default class Button extends React.Component {
   render() {
     return (
-      <div className={`button-${this.props.color} button`}>
-        <a href="/problem">{this.props.label}</a>
-      </div>
+      <Link to={this.props.destination} className="button">
+        <div className={`button-${this.props.color} button`}>
+          {this.props.label}
+        </div>
+      </Link>
     )
   }
 }
 
 Button.propTypes = {
-  color: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired
+  destination: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired
 }

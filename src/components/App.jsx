@@ -7,7 +7,8 @@ export default class GetTo24 extends React.Component {
     return (
       <div>
         <Navbar />
-        <Container />
+
+        {this.props.children}
       </div>
     );
   }

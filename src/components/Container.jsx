@@ -13,8 +13,8 @@ export default class Container extends React.Component {
           </p>
           <br />
           <div className="actions-container">
-            <Button color="green" label="Give me problems" />
-            <Button color="red" label="Show me solutions" />
+            <Button destination="/play" color="green" label="Give me problems" />
+            <Button destination="/solutions" color="red" label="Show me solutions" />
           </div>
         </div>
       </div>

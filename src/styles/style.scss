@@ -19,10 +19,6 @@ body {
 .button {
   padding: 10px;
   display: inline-block;
-  a {
-    text-decoration: none;
-    color: white;
-  }
 }
 
 .button-red {
@@ -35,6 +31,11 @@ body {
 
 .button-yellow {
   background: yellow;
+}
+
+a.button {
+  text-decoration: none;
+  color: white;
 }
 
 .inputbox {
