@@ -6,7 +6,7 @@
   "scripts": {
     "test": "ava 'app/**/*.test.js' --verbose --require ./other/setup-ava-tests.js",
     "producton": "webpack -p",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --hot --inline"
   },
   "author": "Randall Reed, Jr.",
   "license": "ISC",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "babel-core": "^6.6.4",
     "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.5.0",
     "html-webpack-plugin": "^2.9.0",
     "webpack": "^1.12.14",
