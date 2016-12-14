@@ -1,12 +1,14 @@
+var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/index.html',
+  template: __dirname + '/src/index.html',
   filename: 'index.html',
   inject: 'body'
 });
+
 module.exports = {
   entry: [
-    './index.jsx'
+    './src/index.jsx'
   ],
   output: {
     path: __dirname + '/dist',
@@ -14,8 +16,21 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.jsx$/, exclude: /node_modules/, loader: "babel-loader"}
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },
+      {
+        test: /\.(css|scss)$/,
+        loader: "style-loader!css-loader?minimize!postcss-loader!sass-loader"
+      },
     ]
   },
-  plugins: [HTMLWebpackPluginConfig]
+  plugins: [
+    HTMLWebpackPluginConfig,
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery'
+    })
+  ]
 };
